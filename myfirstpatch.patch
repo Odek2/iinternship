@@ -1,0 +1,36 @@
+diff --git a/client3.py b/client3.py
+index 3fc09b7..14406cb 100644
+--- a/client3.py
++++ b/client3.py
+@@ -35,14 +35,22 @@ def getDataPoint(quote):
+     stock = quote['stock']
+     bid_price = float(quote['top_bid']['price'])
+     ask_price = float(quote['top_ask']['price'])
+-    price = bid_price
+-    return stock, bid_price, ask_price, price
++   
++    sum_of_bid_and_ask= bid_price + ask_price
++    #done updating the function 
++
++    price_stock= sum_of_bid_and_ask/2
++    print(f"Coorect Stock Price: {price_stock}")
++    return stock, bid_price, ask_price, price_stock
+ 
+ 
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+-    return 1
++    #Done updationg the function 
++    ratio= price_a/price_b
++    
++    return ratio
+ 
+ 
+ # Main
+@@ -56,4 +64,4 @@ if __name__ == "__main__":
+             stock, bid_price, ask_price, price = getDataPoint(quote)
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        print("Ratio %s" % getRatio(price, price))
++        print("Ratio %s" % getRatio(bid_price, ask_price))

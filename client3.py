@@ -40,14 +40,14 @@ def getDataPoint(quote):
     #done updating the function 
 
     price_stock= sum_of_bid_and_ask/2
-    print(f"Coorect Stock Price: {price_stock}")
+    print(f"Corect Stock Price: {price_stock}")
     return stock, bid_price, ask_price, price_stock
 
 
 def getRatio(price_a, price_b):
     """ Get ratio of price_a and price_b """
     """ ------------- Update this function ------------- """
-    #Done updationg the function 
+    #Done updationg the function  
     ratio= price_a/price_b
     
     return ratio
